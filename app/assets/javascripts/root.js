@@ -1,3 +1,5 @@
+//= require utils
+
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM content loaded.')
   Array.from(document.querySelectorAll('.invoker')).forEach(function(elem) {
@@ -7,14 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
-function isSupported() {
-  if (window.Turbolinks) {
-    return window.Turbolinks.supported;
-  } else {
-    return false;
-  }
-}
 
 console.log('Evaluated.');
 console.log('-- Turbolinks Supported:', isSupported());
